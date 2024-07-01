@@ -14,6 +14,7 @@ Para esto, usaremos datos desde un archivo CSV (entregado anexo a este documento
 1. Creamos un arreglo `M` de **m** bits.
 2. Creamos **k** funciones de hash `h1, h2, ..., hk`.
 3. Para cada elemento `x` del archivo [`Popular-Baby-Names.csv`](Popular-Baby-Names-Final.csv) calculamos `yi = hi(x)` y modificamos el arreglo `M[yi] = 1`.
+
 Con el filtro ya listo, podemos empezar a realizar búsquedas en el CSV con él.
 
 ## 2. Búsqueda
@@ -73,4 +74,5 @@ El informe debe ser claro y conciso. Se recomienda hacerlo en LaTeX. Debe conten
 - (**2.4 pts**) Resultados: Especificación de los datos que se utilizaron para los experimentos, la cantidad de veces que se realizaron los tests, con qué inputs, que tamaño, etc. Se debe mencionar en que sistema operativo y los tamaños de sus cachés y RAM con los que se ejecutaron los experimentos. Se deben mostrar gráficos/tablas y mencionar solo lo que se puede observar de estos, se deben mostrar los valores y parámetros que se están usando.
 - (**1.2 pts**) Análisis: Comentar y concluir sus resultados. Se hacen las inferencias de sus resultados.
 - (**0.8 pts**) Conclusión: Recapitulación de lo que se hizo, se concluye lo que se puede decir con respecto a sus resultados. También ven si su hipótesis se cumplió o no y analizan la razón. Por último, se menciona qué se podría mejorar en su desarrollo en una versión futura, qué falta en su documento, qué no se ha resuelto y cómo se podrían extender.
+  
 Todo lo mencionado debe estar en sus informes en las secciones en las que se señalan, la falta de algún aspecto o la presencia de algún aspecto en una sección equivocada hará que no se tenga la totalidad del puntaje.
