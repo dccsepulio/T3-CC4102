@@ -1,11 +1,8 @@
-#ifndef BLOOM_FILTER_H
-#define BLOOM_FILTER_H
-
 #include <bitset>
 #include <vector>
 #include <string>
 
-const int FILTER_SIZE = 1000;  // Tamaño del arreglo M en bits
+const int FILTER_SIZE = 1000000;  // Tamaño del arreglo M en bits
 const int HASH_FUNCTIONS = 3;  // Número de funciones hash
 
 class BloomFilter {
@@ -20,5 +17,3 @@ public:
 };
 
 void readDataFromCSV(const std::string &filename, BloomFilter &bloomFilter);
-
-#endif // BLOOM_FILTER_H
