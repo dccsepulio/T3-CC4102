@@ -5,6 +5,8 @@
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
+#include <numeric>
+#include <random>
 
 // Función para leer un CSV y devolver un vector de palabras
 std::vector<std::string> readCSV(const std::string& filename) {
@@ -43,7 +45,10 @@ std::vector<std::string> selectRandomWords(const std::vector<std::string>& words
     }
     std::vector<int> indices(words.size());
     std::iota(indices.begin(), indices.end(), 0);
-    std::random_shuffle(indices.begin(), indices.end());
+    
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(indices.begin(), indices.end(), g);
     
     for (int i = 0; i < count; ++i) {
         selectedWords.push_back(words[indices[i]]);
