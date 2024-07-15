@@ -48,7 +48,7 @@ int main() {
     //std::cout << "HEIDY: " << (bloomFilter.contains("HEIDY") ? "Posiblemente en el conjunto" : "No está en el conjunto") << std::endl;
     //std::cout << "GIA: " << (bloomFilter.contains("GIA") ? "Posiblemente en el conjunto" : "No está en el conjunto") << std::endl;
     //std::cout << "GISELLE: " << (bloomFilter.contains("GISELLE") ? "Posiblemente en el conjunto" : "No está en el conjunto") << std::endl;
-    std::string csvToCheck = "test.csv"; // Archivo CSV que se va a verificar
+    std::string csvToCheck = "1024-1-4.csv"; // Archivo CSV que se va a verificar
     processCSVWithBloomFilter(filename, csvToCheck, bloomFilter);
 
     return 0;
