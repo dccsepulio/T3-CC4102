@@ -59,14 +59,15 @@ std::vector<std::string> selectRandomWords(const std::vector<std::string>& words
 int main() {
     // Nombre del archivo de entrada y salida
     //std::string inputFilename = "data/Popular-Baby-Names-Final.csv";
-    std::string inputFilename = "data/Film-Names.csv";
-    std::string outputFilename = "1024-0.csv";
+    std::string inputFilename = "data/worldcities.csv";
+    std::string outputFilename = "test.csv";
     
     // Número de palabras a seleccionar
-    // 256
-    // 512
-    // 768
-    int numberOfWords = 1024;
+    // 16384
+    // 32768
+    // 49152
+    // 65536
+    int numberOfWords = 16384;
 
     // Leer las palabras del archivo CSV
     std::vector<std::string> words = readCSV(inputFilename);
