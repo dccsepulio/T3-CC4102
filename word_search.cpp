@@ -27,7 +27,11 @@ void searchWordInCSV(const std::string &filename, const std::string &word, int &
             if (value == word) {
                 foundCount++;
                 wordFound = true;
+                break;
             }
+        }
+        if (wordFound) {
+            break;
         }
     }
 
