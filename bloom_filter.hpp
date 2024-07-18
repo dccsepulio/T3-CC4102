@@ -3,7 +3,7 @@
 #include <string>
 
 const int FILTER_SIZE = 1000000;  // Tamaño del arreglo M en bits
-const int HASH_FUNCTIONS = 3;  // Número de funciones hash
+const int HASH_FUNCTIONS = 7;  // Número de funciones hash
 
 class BloomFilter {
 private:

@@ -3,8 +3,7 @@
 #include <chrono>
 #include <vector>
 
-// Función que toma un filtro de Bloom ya creado y un archivo CSV para realizar la búsqueda
-void processCSVWithBloomFilter(const std::string &filename, const std::string &csvToCheck, BloomFilter &bloomFilter, int &foundCount, int &notFoundCount) {
+void processCSV(const std::string &filename, const std::string &csvToCheck, int &foundCount, int &notFoundCount) {
     std::ifstream file(csvToCheck);
     if (!file.is_open()) {
         throw std::runtime_error("No se puede abrir el archivo CSV para verificar");
@@ -24,10 +23,7 @@ void processCSVWithBloomFilter(const std::string &filename, const std::string &c
             value.erase(std::remove(value.begin(), value.end(), '\r'), value.cend());
 
             // Verificar si la palabra está en el Bloom Filter
-            if (bloomFilter.contains(value)) {
-                // Buscar la palabra en el archivo original
-                searchWordInCSV(filename, value, foundCount, notFoundCount);
-            }
+            searchWordInCSV(filename, value, foundCount, notFoundCount);
         }
     }
 
@@ -41,25 +37,21 @@ void processCSVWithBloomFilter(const std::string &filename, const std::string &c
 
 int main() {
     BloomFilter bloomFilter;
-    std::ofstream results("execution_times_bloom_filter_7_hash.csv");
+    std::ofstream results("execution_times_without_filter_1.csv");
     results << "data, time, palabras encontradas, palabras no encontradas\n";
     // Leer datos desde un archivo CSV e insertarlos en el filtro
     std::string filename = "data/Popular-Baby-Names-Final.csv";
     //std::string filename = "Film-Names.csv";
     readDataFromCSV(filename, bloomFilter);
 
-    std::vector<std::string> data = {"data/1024-0.csv", "data/1024-1-4.csv", "data/1024-1-2.csv", "data/1024-3-4.csv", 
-                                    "data/1024-1.csv", "data/4096-0.csv", "data/4096-1-4.csv", "data/4096-1-2.csv", 
-                                    "data/4096-3-4.csv",  "data/4096-1.csv", "data/16384-0.csv", "data/16384-1-4.csv", 
-                                    "data/16384-1-2.csv", "data/16384-3-4.csv", "data/16384-1.csv", "data/65536-0.csv", 
-                                    "data/65536-1-4.csv", "data/65536-1-2.csv", "data/65536-3-4.csv", "data/65536-1.csv"};
+    std::vector<std::string> data = {"data/65536-1-4.csv"};
     // Archivo CSV que se va a verificar
     for (std::string data : data){
         int foundCount = 0;
         int notFoundCount = 0;
 
         auto start = std::chrono::high_resolution_clock::now();
-        processCSVWithBloomFilter(filename, data, bloomFilter, foundCount, notFoundCount);
+        processCSV(filename, data, foundCount, notFoundCount);
         auto end = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> duration = end - start;
         double time = duration.count();
