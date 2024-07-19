@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 
-const int FILTER_SIZE = 1000000;  // Tamaño del arreglo M en bits
+const int FILTER_SIZE = 1500000;  // Tamaño del arreglo M en bits
 const int HASH_FUNCTIONS = 7;  // Número de funciones hash
 
 class BloomFilter {

@@ -41,7 +41,7 @@ void processCSVWithBloomFilter(const std::string &filename, const std::string &c
 
 int main() {
     BloomFilter bloomFilter;
-    std::ofstream results("execution_times_bloom_filter_7_hash.csv");
+    std::ofstream results("execution_times_bloom_filter_7_hash_1500000.csv");
     results << "data, time, palabras encontradas, palabras no encontradas\n";
     // Leer datos desde un archivo CSV e insertarlos en el filtro
     std::string filename = "data/Popular-Baby-Names-Final.csv";
