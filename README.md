@@ -82,6 +82,19 @@ Este archivo contiene la implementación de los métodos definidos en `bloom_fil
 
 Este archivo contiene la lógica para escribir en un csv una cantidad de strings de otro csv de manera aleatoria.
 
+### Popular-Baby-Names-Final.csv & Film-Names.csv & worldcities.csv
+
+Estos archivos csv son los que usaron para crear el filtro bloon y luego para crear los archivos cvs que usamos para aplicar la busqueda.
+
+### CSV data
+
+Los archivo tipo numero-(0,1-4,1-2,3-4,1) son los archivos cvs que usamos para buscar luego esas palabras. El numero inicial indica cuantos nombre hay (strings), y los numeros entre parentecis indica el porcentaje de nombre que estan en el csv de popular baby names como fue explicando anteriormente.
+
+### CSV results
+
+Aca estan loso archivos con los resultados del experimento, el execution_times_without_filter son los resultados al hacer la busqueda sin filtro de bloom. Los resultados execution_times_bloom_filter_(#numero)_hash_(1500000/-).csv el #numero indica cuantos hash se usaron en ese filtro de bloom, y el segundo numero, cuando es 1500000, indica que el M es 1500000 y cuando o no hay, es cuando usamos M = 1000000.
+
+En los resultados se guardan el dataset, el tiempo que tomo, los nombres encontrados y los falsos positivos.
 
 ### Requisitos
 
