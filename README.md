@@ -11,6 +11,7 @@ El repositorio contiene los siguientes archivos:
 - **no_filter_main.cpp**: implementa la busqueda de los nombres de la base de datos de Popular Baby Names mediante un proceso grep.
 - **bloom_filter.hpp y bloom_filter.cpp**: Implementación del Filtro de Bloom con la cantidad de bits M y cantidad de hash K definido en el header.
 - **createcsv.cpp**: Crea un csv con las cantidades de palabras deceadas utilizando un csv elegido.
+- **comparar.py**: Crea un gráfico con los resultados del experimento.
 
 - **data/**: Contiene los archivos CSV.
     - `Popular-Baby-Names-Final.csv`
@@ -100,6 +101,10 @@ Los archivo tipo numero-(0,1-4,1-2,3-4,1) son los archivos cvs que usamos para b
 Aca estan loso archivos con los resultados del experimento, el execution_times_without_filter son los resultados al hacer la busqueda sin filtro de bloom. Los resultados execution_times_bloom_filter_(#numero)_hash_(1500000/-).csv el #numero indica cuantos hash se usaron en ese filtro de bloom, y el segundo numero, cuando es 1500000, indica que el M es 1500000 y cuando o no hay, es cuando usamos M = 1000000.
 
 En los resultados se guardan el dataset, el tiempo que tomo, los nombres encontrados y los falsos positivos.
+
+### comparar.py
+
+Toma los resultados del experimento y crea los gráficos comparandolos.
 
 ### Requisitos
 
