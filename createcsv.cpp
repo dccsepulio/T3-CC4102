@@ -60,7 +60,7 @@ int main() {
     // Nombre del archivo de entrada y salida
     //std::string inputFilename = "data/Popular-Baby-Names-Final.csv";
     std::string inputFilename = "data/worldcities.csv";
-    std::string outputFilename = "1024-0.csv";
+    std::string outputFilename = "test.csv";
     
     // Número de palabras a seleccionar
     
