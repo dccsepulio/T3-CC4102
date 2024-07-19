@@ -44,9 +44,14 @@ El repositorio contiene los siguientes archivos:
     - `execution_times_bloom_filter_3_hash.c_1500000sv`: Archivo CSV con los tiempos de ejecución de las pruebas realizadas con K = 3 y M = 1500000.
     - `execution_times_bloom_filter_5_hash.c_1500000sv`: Archivo CSV con los tiempos de ejecución de las pruebas realizadas con K = 5 y M = 1500000.
     - `execution_times_bloom_filter_7_hash.c_1500000sv`: Archivo CSV con los tiempos de ejecución de las pruebas realizadas con K = 7 y M = 1500000.
+- **image/**: Contiene los gráficos e imagenes.
+    - `everything.png`: Gráfico con todos los resultados del experimento.
+    - `hash3.png`: Gráfico con los resultados del filtro de bloom con k = 3.
+    - `hash5.png`: Gráfico con los resultados del filtro de bloom con k = 5.
+    - `hash7.png`: Gráfico con los resultados del filtro de bloom con k = 7.
+    - `image.png`:Foto citada en el enunciado de la tarea.
 - **README.md**: Este archivo.
 - **Tarea 3.md**: Archivo con el enunciado de la tarea.
-- **image.png**: Foto citada en el enunciado de la tarea.
 - **Makefile**: Archivo para facilitar la compilación.
 
 ## Archivos y Descripción
@@ -133,3 +138,15 @@ Para ejecutar el programa y ver los resultados de los experimentos, utiliza los 
 - **Sistema Operativo**: Debian GNU/Linux 12 (bookworm)
 - **Compilador**: g++ (Debian 12.2.0-14) 12.2.0
 - **Versión del estándar de C++**: C++11
+
+### Resultados del filtro de bloom con k = 3
+![resultados del filtro de bloom con k = 3](image/hash3.png)
+
+### Resultados del filtro de bloom con k = 5
+![resultados del filtro de bloom con k = 5](image/hash5.png)
+
+### Resultados del filtro de bloom con k = 7
+![resultados del filtro de bloom con k = 7](image/hash7.png)
+
+### Comparación resultados con filtro y sin filtro
+![Comparación resultados con filtro y sin filtro](image/everything.png)
